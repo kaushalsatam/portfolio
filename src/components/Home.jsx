@@ -9,9 +9,10 @@ function Home() {
         </div>
         <ul className="w-1/3 flex justify-between">
           <li>Home</li>
-          <li>About</li>
+	  <li>Education</li>
           <li>Projects</li>
           <li>Contacts</li>
+          <li>About</li>
         </ul>
       </div>
     </div>
