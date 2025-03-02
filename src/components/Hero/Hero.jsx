@@ -8,7 +8,7 @@ import linkedin from "../../../public/linkedin.png"
 
 function Hero() {
     return <>
-        <div className="container h-dvh w-auto text-white flex justify-center items-center">
+        <div className="h-dvh text-white flex justify-center items-center">
             <div>
                 <h1 className="text-2xl text-center text-gray-500">Hello, I'm</h1>
                 <p className="text-5xl font-bold text-center">Kaushal Satam</p>

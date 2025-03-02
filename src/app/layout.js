@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Poppins } from "next/font/google";
+
+const roboto = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -15,7 +21,7 @@ export default function RootLayout({ children }) {
         />
         <meta name="author" content="Kaushal" />
       </head>
-      <body className="bg-slate-900">{children}</body>
+      <body className={`bg-slate-900 ${roboto.className}`}>{children}</body>
     </html>
   );
 }
