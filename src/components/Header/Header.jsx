@@ -9,8 +9,10 @@ import {
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip, TooltipArrow } from "@radix-ui/react-tooltip";
 
 function Header() {
+
+    const flex = ['Arch', 'Neovim', 'Hyprland', 'Tmux'];
     return <>
-        <div className="fixed top-4 left-4 right-4 flex items-center justify-between bg-slate-800 p-4 rounded-lg text-white text-xl">
+        <div className="z-50 fixed top-4 left-4 right-4 flex items-center justify-between bg-slate-800 p-4 rounded-lg text-white text-xl">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
@@ -21,7 +23,7 @@ function Header() {
                     </TooltipTrigger>
                     <TooltipContent sideOffset={10} >
                         <TooltipArrow width={15} height={10} className="fill-white" />
-                        <p className="bg-white text-black text-sm rounded-sm p-2">I use Arch btw!</p>
+                        <p className="bg-white text-black text-sm rounded-sm p-2">I use {flex[Math.floor(Math.random() * flex.length)]} btw!</p>
                     </TooltipContent>
                 </Tooltip>
             </TooltipProvider>
