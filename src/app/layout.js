@@ -8,7 +8,7 @@ const roboto = Poppins({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <title>Kaushal Satam | Portfolio</title>
         <meta

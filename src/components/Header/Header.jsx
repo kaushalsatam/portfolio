@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import terminal from "../../../public/terminal.png"
 import { Menu } from "lucide-react";
 import {
@@ -16,10 +17,12 @@ function Header() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <div id="logo" className="gap-4 flex justify-between cursor-pointer select-none">
-                            <Image src={terminal} alt="terminal" width={25} height={25} />
-                            <p className="font-bold">kaushaldotdev</p>
-                        </div>
+                        <Link href={'#home'} className="transition-all duration-300 ease-linear">
+                            <div id="logo" className="gap-4 flex justify-between cursor-pointer select-none">
+                                <Image src={terminal} alt="terminal" width={25} height={25} />
+                                <p className="font-bold">kaushaldotdev</p>
+                            </div>
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent sideOffset={10} >
                         <TooltipArrow width={15} height={10} className="fill-white" />
@@ -28,14 +31,14 @@ function Header() {
                 </Tooltip>
             </TooltipProvider>
             <div id="navigation">
-                <ul className="md:flex hidden gap-8 text-white">
-                    <li>About</li>
-                    <li>Experience</li>
-                    <li>Technologies</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                <ul className="lg:flex hidden gap-8 text-white">
+                    <li><Link href={"#about"} className="transition-all duration-300 ease-linear">About</Link></li>
+                    <li><Link href={"#experience"} className="transition-all duration-300 ease-linear">Experience</Link></li>
+                    <li><Link href={"#technologies"} className="transition-all duration-300 ease-linear">Technologies</Link></li>
+                    <li><Link href={"#projects"} className="transition-all duration-300 ease-linear">Projects</Link></li>
+                    <li><Link href={"#contact"} className="transition-all duration-300 ease-linear">Contact</Link></li>
                 </ul>
-                <div className="md:hidden block">
+                <div className="lg:hidden block">
 
                     <Popover>
                         <PopoverTrigger>
@@ -43,11 +46,11 @@ function Header() {
                         </PopoverTrigger>
                         <PopoverContent className="w-60 bg-black text-xl text-white">
                             <ul className="gap-8 flex flex-col">
-                                <li>About</li>
-                                <li>Experience</li>
-                                <li>Technologies</li>
-                                <li>Projects</li>
-                                <li>Contact</li>
+                                <li><Link href={"#about"} className="transition-all duration-300 ease-linear">About</Link></li>
+                                <li><Link href={"#experience"} className="transition-all duration-300 ease-linear">Experience</Link></li>
+                                <li><Link href={"#technologies"} className="transition-all duration-300 ease-linear">Technologies</Link></li>
+                                <li><Link href={"#projects"} className="transition-all duration-300 ease-linear">Projects</Link></li>
+                                <li><Link href={"#contact"} className="transition-all duration-300 ease-linear">Contact</Link></li>
                             </ul>
                         </PopoverContent>
                     </Popover>
