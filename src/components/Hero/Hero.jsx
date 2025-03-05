@@ -13,8 +13,8 @@ function Hero() {
             <div className="grid grid-rows-2 grid-cols-1 sm:grid-rows-1 lg:grid-cols-2 lg:gap-8">
                 <Image src={hero} alt="hero-img" className="justify-self-center h-60 lg:h-80 lg:w-80 w-60" />
                 <div className=" flex flex-col justify-center items-center">
-                    <h1 className="text-xl lg:text-2xl text-center text-gray-500">Hello, I'm</h1>
-                    <p className="text-4xl lg:text-5xl font-bold text-center m-2">Kaushal Satam</p>
+                    <h1 className="text-center text-gray-300">Hello, I'm</h1>
+                    <p className="text-4xl lg:text-5xl font-extrabold text-center m-2">Kaushal Satam</p>
                     <p className="text-xl lg:text-2xl font-bold text-center text-gray-500 ">Software Developer</p>
                     <div className="flex justify-around gap-2 mt-8">
                         <Button variant="outline" className="bg-transparent h-12 rounded-lg" onClick={() => { open("Kaushal-Satam-Resume.pdf", "_blank", "noopener,noreferrer") }}>

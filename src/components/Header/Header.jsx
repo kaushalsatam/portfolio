@@ -13,7 +13,7 @@ function Header() {
 
     const flex = ['Arch', 'Neovim', 'Hyprland', 'Tmux'];
     return <>
-        <div className="z-50 fixed top-4 left-4 right-4 flex items-center justify-between bg-slate-800 p-4 rounded-lg text-white text-xl">
+        <div className="z-50 fixed top-4 left-4 right-4 flex items-center justify-between bg-slate-600 p-4 rounded-lg text-white text-xl border-black bg-opacity-50">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
