@@ -6,8 +6,12 @@ import Image from "next/image";
 import github from "../../../public/github.png"
 import linkedin from "../../../public/linkedin.png"
 import hero from "../../../public/me1.png"
+import { usePathname } from "next/navigation";
 
 function Hero() {
+
+    const pathName = usePathname();
+
     return <>
         <div id="home" className="h-dvh w-full text-white flex justify-center items-center">
             <div className="grid grid-rows-2 grid-cols-1 sm:grid-rows-1 lg:grid-cols-2 lg:gap-8">
@@ -20,7 +24,7 @@ function Hero() {
                         <Button variant="outline" className="bg-transparent h-12 rounded-lg" onClick={() => { open("Kaushal-Satam-Resume.pdf", "_blank", "noopener,noreferrer") }}>
                             <ArrowDownToLineIcon /> Download CV
                         </Button>
-                        <Button variant="secondary" className="h-12">
+                        <Button variant="secondary" className="h-12" onClick={() => console.log(pathName)}>
                             <UserIcon /> Contact Info
                         </Button>
                     </div>

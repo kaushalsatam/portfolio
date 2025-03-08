@@ -17,7 +17,7 @@ function Header() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Link href={'#home'} className="transition-all duration-300 ease-linear">
+                        <Link href={'/'} className="transition-all duration-300 ease-linear">
                             <div id="logo" className="gap-4 flex justify-between cursor-pointer select-none">
                                 <Image src={terminal} alt="terminal" width={25} height={25} />
                                 <p className="font-bold">kaushaldotdev</p>
