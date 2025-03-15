@@ -21,7 +21,7 @@ function Hero() {
                         <Button variant="outline" className="bg-transparent h-12 rounded-lg" onClick={() => { open("Kaushal-Satam-Resume.pdf", "_blank", "noopener,noreferrer") }}>
                             <ArrowDownToLineIcon /> Download CV
                         </Button>
-                        <Button variant="secondary" className="h-12" onClick={() => { }}>
+                        <Button variant="secondary" className="h-12" onClick={() => { window.location.href = '#contact' }}>
                             <UserIcon /> Contact Info
                         </Button>
                     </div>
