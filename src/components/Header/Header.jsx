@@ -2,11 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import terminal from "../../../public/terminal.png"
 import { Menu } from "lucide-react";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover"
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip, TooltipArrow } from "@radix-ui/react-tooltip";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 
@@ -14,7 +9,7 @@ function Header() {
 
     const flex = ['Arch', 'Neovim', 'Hyprland', 'Tmux'];
     return <>
-        <div className="z-50 fixed top-4 left-4 right-4 flex items-center justify-between bg-slate-600 p-4 rounded-lg text-white text-xl border-black bg-opacity-50">
+        <div className="z-50 fixed top-4 left-4 right-4 flex items-center justify-between bg-black p-4 rounded-lg text-white text-xl border-black bg-opacity-50">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
