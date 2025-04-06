@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         />
         <meta name="author" content="Kaushal" />
       </head>
-      <body className={`bg-slate-800 ${roboto.className}`}>{children}</body>
+      <body className={`bg-black ${roboto.className}`}>{children}</body>
     </html>
   );
 }
