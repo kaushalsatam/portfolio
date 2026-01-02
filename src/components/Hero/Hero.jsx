@@ -6,6 +6,7 @@ import Image from "next/image";
 import github from "../../../public/github.png"
 import linkedin from "../../../public/linkedin.png"
 import hero from "../../../public/me1.png"
+import { Spinner } from "../ui/spinner";
 
 function Hero({ githubData, isLoading }) {
 
@@ -13,7 +14,9 @@ function Hero({ githubData, isLoading }) {
         <div id="home" className="h-dvh w-full text-white flex justify-center items-center">
             <div className="grid grid-rows-2 grid-cols-1 sm:grid-rows-1 lg:grid-cols-2 lg:gap-8">
                 {isLoading ?
-                    <Image src={hero} alt="hero-img" className="justify-self-center h-60 lg:h-80 lg:w-80 w-60" />
+                    <div className="flex justify-center items-center">
+                        <Spinner />
+                    </div>
                     :
                     <Image src={githubData.avatar_url} alt="Profile Picture" className="justify-self-center h-60 lg:h-80 lg:w-80 w-60 rounded-full" height={200} width={200} />
                 }
