@@ -15,7 +15,7 @@ const Hero = () => {
         >
           Open to work
         </SparklesText>
-        <h1 className="text-5xl w-auto px-28 text-center leading-tight">
+        <h1 className="text-5xl w-auto px-28 text-center leading-tight font-semibold">
           I build scalable, user-focused{" "}
           <span className="inline-flex align-baseline">
             <RotatingText

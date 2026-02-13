@@ -12,14 +12,11 @@ const Header = () => {
       </div>
 
       <div className="fixed top-4 left-0 w-full z-50 flex justify-evenly items-center">
-        <div className="bg-white rounded-full h-16 w-16">
           <img
             src={logo}
-            height={100}
-            width={100}
-            className="fill-blue-700"
+            height={75}
+            width={75}
           ></img>
-        </div>
         <GlassSurface width={500} height={50} borderRadius={50}>
           <div className="flex items-center justify-center gap-6">
             <NavLink to={"/"}>Home</NavLink>
