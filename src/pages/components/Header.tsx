@@ -5,32 +5,32 @@ import GradualBlurMemo from "@/components/GradualBlur";
 import logo from "@/assets/logo-dark.svg";
 
 const Header = () => {
-  return (
-    <>
-      <div className="fixed top-0 left-0 w-full h-24 z-40 pointer-events-none">
-        <GradualBlurMemo position="top" strength={1.5} exponential={true} />
-      </div>
+    return (
+        <header>
+            <div className="fixed top-0 left-0 w-full h-24 z-40 pointer-events-none">
+                <GradualBlurMemo position="top" strength={1.5} exponential={true} />
+            </div>
 
-      <div className="fixed top-4 left-0 w-full z-50 flex justify-evenly items-center">
-          <img
-            src={logo}
-            height={75}
-            width={75}
-          ></img>
-        <GlassSurface width={500} height={50} borderRadius={50}>
-          <div className="flex items-center justify-center gap-6">
-            <NavLink to={"/"}>Home</NavLink>
-            <NavLink to={"/aboutme"}>About</NavLink>
-            <NavLink to={"#"}>Experience</NavLink>
-            <NavLink to={"#"}>Projects</NavLink>
-            <NavLink to={"#"}>More</NavLink>
-            <NavLink to={"#"}>Contact</NavLink>
-          </div>
-        </GlassSurface>
-        <AnimatedThemeToggler />
-      </div>
-    </>
-  );
+            <div className="fixed top-4 left-0 w-full z-50 flex justify-evenly items-center">
+                <img
+                    src={logo}
+                    height={75}
+                    width={75}
+                ></img>
+                <GlassSurface width={500} height={50} borderRadius={50}>
+                    <div className="flex items-center justify-center gap-6">
+                        <NavLink to={"/"}>Home</NavLink>
+                        <NavLink to={"#"}>About</NavLink>
+                        <NavLink to={"#"}>Experience</NavLink>
+                        <NavLink to={"#"}>Projects</NavLink>
+                        <NavLink to={"#"}>More</NavLink>
+                        <NavLink to={"#"}>Contact</NavLink>
+                    </div>
+                </GlassSurface>
+                <AnimatedThemeToggler />
+            </div>
+        </header>
+    );
 };
 
 export default Header;

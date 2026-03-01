@@ -1,5 +1,4 @@
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import { Globe } from "@/components/ui/globe";
 import {
   BellIcon,
   CalendarIcon,
@@ -12,54 +11,58 @@ const AtAGlance = () => {
   const features = [
     {
       Icon: FileTextIcon,
-      name: "Save your files",
-      description: "We automatically save your files as you type.",
+      name: "A Card",
+      description: "Card A",
       href: "/",
       cta: "Learn more",
-      background: <Globe />,
-      className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
+      background: <div />,
+      className:
+        "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2", // A (col-span-2)
     },
     {
       Icon: InputIcon,
-      name: "Full text search",
-      description: "Search through all your files in one place.",
+      name: "B Card",
+      description: "Card B",
       href: "/",
       cta: "Learn more",
-      background: <img className="absolute -top-20 -right-20 opacity-60" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+      background: <div />,
+      className:
+        "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3", // B (row-span-2)
     },
     {
       Icon: GlobeIcon,
-      name: "Multilingual",
-      description: "Supports 100+ languages and counting.",
+      name: "C Card",
+      description: "Card C",
       href: "/",
       cta: "Learn more",
-      background: <img className="absolute -top-20 -right-20 opacity-60" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+      background: <div />,
+      className:
+        "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-4", // C (row-span-2)
     },
     {
       Icon: CalendarIcon,
-      name: "Calendar",
-      description: "Use the calendar to filter your files by date.",
+      name: "D Card",
+      description: "Card D",
       href: "/",
       cta: "Learn more",
-      background: <img className="absolute -top-20 -right-20 opacity-60" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+      background: <div />,
+      className:
+        "lg:col-start-2 lg:col-end-4 lg:row-start-3 lg:row-end-4", // D (col-span-2)
     },
     {
       Icon: BellIcon,
-      name: "Notifications",
-      description:
-        "Get notified when someone shares a file or mentions you in a comment.",
+      name: "E Card",
+      description: "Card E",
       href: "/",
       cta: "Learn more",
-      background: <img className="absolute -top-20 -right-20 opacity-60" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
+      background: <div />,
+      className:
+        "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3", // E (single cell)
     },
   ];
   return (
     <div className="px-12">
-      <BentoGrid className="lg:grid-rows-3">
+      <BentoGrid className="lg:grid-rows-3 lg:grid-cols-3 aspect-square">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}
