@@ -4,8 +4,12 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { FileDown } from "lucide-react";
+import resume from "@/assets/Kaushal-Satam-Resume.pdf";
 
 const Hero = () => {
+  const openResume = () => {
+    window.open(resume, "_blank");
+  }
   return (
     <div id="home" className="h-screen flex justify-center items-center">
       <div className="grid grid-cols-1 grid-rows-[auto_auto_auto_auto]">
@@ -51,7 +55,7 @@ const Hero = () => {
           <InteractiveHoverButton className="h-12 w-42 text-center">
             Get in touch
           </InteractiveHoverButton>
-          <ShimmerButton>
+          <ShimmerButton onClick={openResume}>
             {" "}
             Download CV <FileDown />
           </ShimmerButton>

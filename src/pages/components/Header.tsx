@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 import GlassSurface from "@/components/GlassSurface";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import GradualBlurMemo from "@/components/GradualBlur";
-import logo from "@/assets/logo-dark.svg";
+import logo from "@/assets/logo.svg";
 
 const Header = () => {
     return (
