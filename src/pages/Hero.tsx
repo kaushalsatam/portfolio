@@ -9,59 +9,76 @@ import resume from "@/assets/Kaushal-Satam-Resume.pdf";
 const Hero = () => {
   const openResume = () => {
     window.open(resume, "_blank");
-  }
+  };
+
   return (
-    <div id="home" className="h-screen flex justify-center items-center">
-      <div className="grid grid-cols-1 grid-rows-[auto_auto_auto_auto]">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center px-6"
+    >
+      <div className="max-w-5xl flex flex-col items-center text-center gap-8">
+        {/* Status */}
         <SparklesText
           sparklesCount={3}
-          className="text-center m-4 text-sm font-light"
+          className="text-sm tracking-wide text-muted-foreground"
         >
-          Open to work
+          Open to Work
         </SparklesText>
-        <h1 className="text-5xl w-auto px-28 text-center leading-tight font-semibold">
+
+        {/* Main Heading */}
+        <h1
+          className="font-semibold leading-[1.15] tracking-tight
+                       text-[clamp(2.2rem,4vw,3.5rem)] max-w-4xl"
+        >
           I build scalable, user-focused{" "}
           <span className="inline-flex align-baseline">
             <RotatingText
               texts={["web", "mobile"]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-blue-700 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg text-white"
+              mainClassName="px-3 bg-blue-700 text-white rounded-lg overflow-hidden py-1 md:py-2"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "-120%" }}
               staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              splitLevelClassName="overflow-hidden pb-1"
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={5000}
             />
           </span>{" "}
-          applications with clean code and modern technologies.
+          applications with clean code and modern technologies
         </h1>
-        <p className="m-8 text-2xl text-center">
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
           Hello, I am{" "}
           <span className="inline-flex align-baseline">
             <GradientText
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              colors={["#40ffaa", "#4079ff", "#40ffaa"]}
               animationSpeed={3}
               showBorder={false}
-              className="font-extrabold"
+              className="font-bold"
             >
               Kaushal Satam
             </GradientText>
           </span>{" "}
-          a <i>Software Developer</i>
+          — a Software Developer building scalable full-stack applications.
         </p>
-        <div className="flex justify-center items-center gap-4">
-          <InteractiveHoverButton className="h-12 w-42 text-center">
+
+        {/* Buttons */}
+        <div className="flex flex-row flex-wrap justify-center items-center gap-3 pt-2">
+          <InteractiveHoverButton className="h-10 sm:h-12 px-4 sm:px-7 text-sm sm:text-base">
             Get in touch
           </InteractiveHoverButton>
-          <ShimmerButton onClick={openResume}>
-            {" "}
-            Download CV <FileDown />
+
+          <ShimmerButton
+            onClick={openResume}
+            className="flex items-center gap-2 h-10 sm:h-12 px-4 sm:px-6 text-sm sm:text-base"
+          >
+            Download CV <FileDown size={16} className="sm:w-4.5 sm:h-4.5" />
           </ShimmerButton>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
