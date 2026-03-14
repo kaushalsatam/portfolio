@@ -4,7 +4,7 @@ import { Squash as Hamburger } from "hamburger-react";
 import GlassSurface from "@/components/GlassSurface";
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import GradualBlurMemo from "@/components/GradualBlur";
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);

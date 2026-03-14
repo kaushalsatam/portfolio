@@ -49,7 +49,7 @@ const Hero = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
+        <div className="text-lg md:text-xl text-muted-foreground max-w-2xl">
           Hello, I am{" "}
           <span className="inline-flex align-baseline">
             <GradientText
@@ -62,13 +62,15 @@ const Hero = () => {
             </GradientText>
           </span>{" "}
           — a Software Developer building scalable full-stack applications.
-        </p>
+        </div>
 
         {/* Buttons */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-3 pt-2">
+          <a href="#contact">
           <InteractiveHoverButton className="h-10 sm:h-12 px-4 sm:px-7 text-sm sm:text-base">
             Get in touch
           </InteractiveHoverButton>
+          </a>
 
           <ShimmerButton
             onClick={openResume}

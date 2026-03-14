@@ -73,7 +73,7 @@ const Footer = () => {
 
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="mailto:kaushalsatam@example.com"
+                href="mailto:satamkaushal@gmail.com"
                 className="flex items-center gap-2 hover:opacity-70 transition"
               >
                 <Mail size={16} />
@@ -81,7 +81,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://github.com/yourgithub"
+                href="https://github.com/kaushalsatam"
                 target="_blank"
                 className="flex items-center gap-2 hover:opacity-70 transition"
               >
@@ -90,7 +90,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourlinkedin"
+                href="https://linkedin.com/in/kaushalsatam"
                 target="_blank"
                 className="flex items-center gap-2 hover:opacity-70 transition"
               >

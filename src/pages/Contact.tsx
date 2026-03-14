@@ -6,7 +6,7 @@ import Particles from "@/components/Particles"; // example background
 const Contact = () => {
   const [copied, setCopied] = useState(false);
 
-  const email = "kaushalsatam@example.com";
+  const email = "satamkaushal@gmail.com";
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText(email);
@@ -76,7 +76,7 @@ const Contact = () => {
           {/* Social Links */}
           <div className="flex gap-6">
             <a
-              href="https://github.com/yourgithub"
+              href="https://github.com/kaushalsatam"
               target="_blank"
               className="
               flex items-center gap-2
@@ -92,7 +92,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourlinkedin"
+              href="https://linkedin.com/in/kaushalsatam"
               target="_blank"
               className="
               flex items-center gap-2

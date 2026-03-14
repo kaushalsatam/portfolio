@@ -18,8 +18,8 @@ Built responsive React UI, implemented Node.js REST APIs, and integrated Razorpa
 "
             image="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
             tech={["React", "Node.js", "Express", "PostgreSQL", "Razorpay"]}
-            live="#"
-            github="#"
+            live="https://solespace-ecommerce.vercel.app"
+            github="https://github.com/kaushalsatam/shoe-store/"
           />
         </div>
       </div>
