@@ -36,10 +36,10 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* GO-TO */}
           <div className="flex flex-col gap-4">
             <h4 className="font-semibold text-sm uppercase tracking-wide">
-              Navigation
+              GO-TO
             </h4>
 
             <div className="flex flex-col gap-2 text-neutral-700 dark:text-neutral-300 text-sm">

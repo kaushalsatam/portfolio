@@ -9,7 +9,7 @@ const Experience = () => {
 
       <div className="max-w-4xl w-full relative">
         {/* Timeline Line */}
-        <div className="absolute left-2 top-0 h-full w-[2px] bg-neutral-300 dark:bg-neutral-700" />
+        <div className="absolute left-2 top-0 h-full w-0.5 bg-neutral-300 dark:bg-neutral-700" />
 
         {/* Experience Card */}
         <div className="relative pl-10 pb-12">
