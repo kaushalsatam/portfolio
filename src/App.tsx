@@ -3,6 +3,9 @@ import AtAGlance from "./pages/AtAGlance";
 import Header from "./pages/components/Header";
 import Experience from "./pages/Experience";
 import Hero from "./pages/Hero";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <AtAGlance />
       <AboutMe />
       <Experience />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
