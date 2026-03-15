@@ -16,8 +16,7 @@ const AtAGlance = () => {
       href: "/",
       cta: "Learn more",
       background: <div />,
-      className:
-        "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2", // A (col-span-2)
+      className: "lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2", // A (col-span-2)
     },
     {
       Icon: InputIcon,
@@ -26,8 +25,7 @@ const AtAGlance = () => {
       href: "/",
       cta: "Learn more",
       background: <div />,
-      className:
-        "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3", // B (row-span-2)
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-3", // B (row-span-2)
     },
     {
       Icon: GlobeIcon,
@@ -36,8 +34,7 @@ const AtAGlance = () => {
       href: "/",
       cta: "Learn more",
       background: <div />,
-      className:
-        "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-4", // C (row-span-2)
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-4", // C (row-span-2)
     },
     {
       Icon: CalendarIcon,
@@ -46,8 +43,7 @@ const AtAGlance = () => {
       href: "/",
       cta: "Learn more",
       background: <div />,
-      className:
-        "lg:col-start-2 lg:col-end-4 lg:row-start-3 lg:row-end-4", // D (col-span-2)
+      className: "lg:col-start-2 lg:col-end-4 lg:row-start-3 lg:row-end-4", // D (col-span-2)
     },
     {
       Icon: BellIcon,
@@ -56,8 +52,7 @@ const AtAGlance = () => {
       href: "/",
       cta: "Learn more",
       background: <div />,
-      className:
-        "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3", // E (single cell)
+      className: "lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3", // E (single cell)
     },
   ];
   return (
