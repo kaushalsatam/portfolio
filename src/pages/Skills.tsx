@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card";
 import {
   SiJavascript,
   SiTypescript,
@@ -18,28 +18,31 @@ import {
   SiNginx,
   SiFlutter,
   SiShadcnui,
-} from "react-icons/si"
+} from "react-icons/si";
 
-import { TbApi } from "react-icons/tb"
-import { RiShieldKeyholeFill } from "react-icons/ri"
-import { FaDatabase } from "react-icons/fa"
-import { BiLogoPostgresql } from "react-icons/bi"
+import { TbApi } from "react-icons/tb";
+import { RiShieldKeyholeFill } from "react-icons/ri";
+import { FaDatabase } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 type Skill = {
-  name: string
-  icon: React.ReactNode
-}
+  name: string;
+  icon: React.ReactNode;
+};
 
 type SkillCategory = {
-  title: string
-  skills: Skill[]
-}
+  title: string;
+  skills: Skill[];
+};
 
 const skillData: SkillCategory[] = [
   {
     title: "Languages",
     skills: [
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript className="text-yellow-400" />,
+      },
       { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "Python", icon: <SiPython className="text-yellow-500" /> },
       { name: "SQL", icon: <FaDatabase className="text-cyan-400" /> },
@@ -52,7 +55,10 @@ const skillData: SkillCategory[] = [
       { name: "HTML5", icon: <SiHtml5 className="text-orange-500" /> },
       { name: "CSS3", icon: <SiCss className="text-blue-500" /> },
       { name: "TailwindCSS", icon: <SiTailwindcss className="text-sky-400" /> },
-      { name: "Material UI", icon: <SiMaterialdesign className="text-blue-400" /> },
+      {
+        name: "Material UI",
+        icon: <SiMaterialdesign className="text-blue-400" />,
+      },
       { name: "Shadcn UI", icon: <SiShadcnui className="text-black" /> },
     ],
   },
@@ -66,7 +72,10 @@ const skillData: SkillCategory[] = [
   {
     title: "Databases",
     skills: [
-      { name: "PostgreSQL", icon: <BiLogoPostgresql className="text-blue-400" /> },
+      {
+        name: "PostgreSQL",
+        icon: <BiLogoPostgresql className="text-blue-400" />,
+      },
       { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
     ],
   },
@@ -76,7 +85,10 @@ const skillData: SkillCategory[] = [
       { name: "JWT", icon: <RiShieldKeyholeFill className="text-green-400" /> },
       { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
       { name: "Git", icon: <SiGit className="text-orange-500" /> },
-      { name: "GitHub Actions", icon: <SiGithubactions className="text-blue-500" /> },
+      {
+        name: "GitHub Actions",
+        icon: <SiGithubactions className="text-blue-500" />,
+      },
       { name: "Linux", icon: <SiLinux className="text-yellow-400" /> },
       { name: "REST APIs", icon: <TbApi className="text-purple-400" /> },
       { name: "Nginx", icon: <SiNginx className="text-green-500" /> },
@@ -84,18 +96,14 @@ const skillData: SkillCategory[] = [
   },
   {
     title: "Other",
-    skills: [
-      { name: "Flutter", icon: <SiFlutter className="text-sky-400" /> },
-    ],
+    skills: [{ name: "Flutter", icon: <SiFlutter className="text-sky-400" /> }],
   },
-]
+];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 container mx-auto">
-      <h2 className="text-4xl font-bold mb-12 text-center">
-        Skills
-      </h2>
+    <section id="skills" className="py-24 md:px-46 px-6 container mx-auto">
+      <h2 className="text-4xl font-bold mb-12 text-center">Skills</h2>
 
       <div className="space-y-12">
         {skillData.map((category) => (
@@ -114,9 +122,7 @@ export default function Skills() {
                     <div className="text-3xl group-hover:scale-110 transition">
                       {skill.icon}
                     </div>
-                    <span className="text-sm font-medium">
-                      {skill.name}
-                    </span>
+                    <span className="text-sm font-medium">{skill.name}</span>
                   </CardContent>
                 </Card>
               ))}
@@ -125,5 +131,5 @@ export default function Skills() {
         ))}
       </div>
     </section>
-  )
+  );
 }
