@@ -29,7 +29,7 @@ const educationData: EducationItem[] = [
 
 export default function Education() {
   return (
-    <section className="py-20 container mx-auto px-4">
+    <section id="education" className="py-24 container mx-auto px-4">
       <h2 className="text-4xl font-bold text-center mb-12">
         Education
       </h2>

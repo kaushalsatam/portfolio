@@ -89,7 +89,7 @@ const skillData: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 container mx-auto">
+    <section id="skills" className="py-24 px-6 container mx-auto">
       <h2 className="text-4xl font-bold mb-12 text-center">
         Skills
       </h2>

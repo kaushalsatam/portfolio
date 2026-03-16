@@ -2,7 +2,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="min-h-screen w-full flex flex-col items-center px-6 py-20"
+      className="min-h-screen w-full flex flex-col items-center px-6 py-24"
     >
       {/* Section Title */}
       <h2 className="text-4xl font-bold mb-16 text-center">Experience</h2>

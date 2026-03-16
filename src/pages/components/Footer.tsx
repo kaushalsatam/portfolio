@@ -55,12 +55,16 @@ const Footer = () => {
                 Experience
               </a>
 
+              <a href="#education" className="hover:opacity-70 transition">
+                Education
+              </a>
+
               <a href="#projects" className="hover:opacity-70 transition">
                 Projects
               </a>
 
-              <a href="#contact" className="hover:opacity-70 transition">
-                Contact
+              <a href="#skills" className="hover:opacity-70 transition">
+                Skills
               </a>
             </div>
           </div>

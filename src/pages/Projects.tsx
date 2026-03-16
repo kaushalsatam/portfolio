@@ -7,7 +7,7 @@ const Projects = () => {
       className="min-h-screen px-6 py-24 flex flex-col items-center"
     >
       <div className="max-w-6xl w-full">
-        <h2 className="text-4xl font-semibold mb-14 text-center">Projects</h2>
+        <h2 className="text-4xl font-bold mb-14 text-center">Projects</h2>
 
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectCard
