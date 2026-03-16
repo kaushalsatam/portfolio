@@ -38,11 +38,13 @@ const Header = () => {
       <div className="fixed top-4 left-0 w-full z-50 px-6">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <img
-            src={logo}
-            alt="Kaushal Satam"
-            className="w-10 h-10 sm:w-12 sm:h-12"
-          />
+          <a href="#">
+            <img
+              src={logo}
+              alt="Kaushal Satam"
+              className="w-10 h-10 sm:w-12 sm:h-12"
+            />
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex"> <GlassSurface width={550} height={48} borderRadius={50}> <nav className="flex items-center justify-center gap-6 text-sm font-medium"> {links.map((link) => (<a key={link.name} href={link.href} className="hover:opacity-70 transition" > {link.name} </a>))} </nav> </GlassSurface> </div>

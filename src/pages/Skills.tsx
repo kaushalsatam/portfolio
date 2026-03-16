@@ -3,7 +3,6 @@ import {
   SiJavascript,
   SiTypescript,
   SiPython,
-  SiPostgresql,
   SiMysql,
   SiReact,
   SiHtml5,
@@ -18,10 +17,13 @@ import {
   SiLinux,
   SiNginx,
   SiFlutter,
+  SiShadcnui,
 } from "react-icons/si"
 
 import { TbApi } from "react-icons/tb"
 import { RiShieldKeyholeFill } from "react-icons/ri"
+import { FaDatabase } from "react-icons/fa"
+import { BiLogoPostgresql } from "react-icons/bi"
 
 type Skill = {
   name: string
@@ -40,7 +42,7 @@ const skillData: SkillCategory[] = [
       { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
       { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "Python", icon: <SiPython className="text-yellow-500" /> },
-      { name: "SQL", icon: <TbApi className="text-cyan-400" /> },
+      { name: "SQL", icon: <FaDatabase className="text-cyan-400" /> },
     ],
   },
   {
@@ -51,6 +53,7 @@ const skillData: SkillCategory[] = [
       { name: "CSS3", icon: <SiCss className="text-blue-500" /> },
       { name: "TailwindCSS", icon: <SiTailwindcss className="text-sky-400" /> },
       { name: "Material UI", icon: <SiMaterialdesign className="text-blue-400" /> },
+      { name: "Shadcn UI", icon: <SiShadcnui className="text-black" /> },
     ],
   },
   {
@@ -63,7 +66,7 @@ const skillData: SkillCategory[] = [
   {
     title: "Databases",
     skills: [
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+      { name: "PostgreSQL", icon: <BiLogoPostgresql className="text-blue-400" /> },
       { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
     ],
   },

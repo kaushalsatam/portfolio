@@ -52,10 +52,12 @@ const Contact = () => {
         >
           {/* Email */}
           <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center gap-3 text-lg font-medium">
-              <Mail size={20} />
-              {email}
-            </div>
+            <a href={`mailto:${email}`}>
+              <div className="flex items-center gap-3 text-lg font-medium p-6">
+                <Mail size={20} />
+                {email}
+              </div>
+            </a>
 
             <ShimmerButton
               onClick={copyEmail}
