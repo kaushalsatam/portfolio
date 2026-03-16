@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./pages/components/Footer";
 import Skills from "./pages/Skills";
+import Education from "./pages/Education";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <AtAGlance />
       <AboutMe />
       <Experience />
+      <Education />
       <Projects />
       <Skills />
       <Contact />
