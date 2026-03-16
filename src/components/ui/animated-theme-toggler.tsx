@@ -4,7 +4,8 @@ import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
 
-interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"button"> {
+interface AnimatedThemeTogglerProps
+  extends React.ComponentPropsWithoutRef<"button"> {
   duration?: number
 }
 
@@ -17,19 +18,48 @@ export const AnimatedThemeToggler = ({
   const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    const updateTheme = () => {
-      setIsDark(document.documentElement.classList.contains("dark"))
+    const savedTheme = localStorage.getItem("theme")
+
+    // Priority: localStorage > system theme
+    if (savedTheme) {
+      const dark = savedTheme === "dark"
+      document.documentElement.classList.toggle("dark", dark)
+      setIsDark(dark)
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches
+
+      document.documentElement.classList.toggle("dark", prefersDark)
+      setIsDark(prefersDark)
     }
 
-    updateTheme()
+    // Detect system theme change
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 
-    const observer = new MutationObserver(updateTheme)
+    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem("theme")) {
+        document.documentElement.classList.toggle("dark", e.matches)
+        setIsDark(e.matches)
+      }
+    }
+
+    mediaQuery.addEventListener("change", handleSystemThemeChange)
+
+    // Observe manual class changes
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains("dark"))
+    })
+
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["class"],
     })
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      mediaQuery.removeEventListener("change", handleSystemThemeChange)
+    }
   }, [])
 
   const toggleTheme = useCallback(async () => {
@@ -38,16 +68,20 @@ export const AnimatedThemeToggler = ({
     await document.startViewTransition(() => {
       flushSync(() => {
         const newTheme = !isDark
+
         setIsDark(newTheme)
-        document.documentElement.classList.toggle("dark")
+        document.documentElement.classList.toggle("dark", newTheme)
+
         localStorage.setItem("theme", newTheme ? "dark" : "light")
       })
     }).ready
 
     const { top, left, width, height } =
       buttonRef.current.getBoundingClientRect()
+
     const x = left + width / 2
     const y = top + height / 2
+
     const maxRadius = Math.hypot(
       Math.max(left, window.innerWidth - left),
       Math.max(top, window.innerHeight - top)
