@@ -45,21 +45,7 @@ const Header = () => {
           />
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex">
-            <GlassSurface width={520} height={48} borderRadius={50}>
-              <nav className="flex items-center justify-center gap-6 text-sm font-medium">
-                {links.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="hover:opacity-70 transition"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </nav>
-            </GlassSurface>
-          </div>
+          <div className="hidden md:flex"> <GlassSurface width={550} height={48} borderRadius={50}> <nav className="flex items-center justify-center gap-6 text-sm font-medium"> {links.map((link) => (<a key={link.name} href={link.href} className="hover:opacity-70 transition" > {link.name} </a>))} </nav> </GlassSurface> </div>
 
           {/* Right Controls */}
           <div className="flex items-center gap-3">
@@ -90,7 +76,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-4 flex justify-center relative z-50">
-            <GlassSurface width={260} height={300} borderRadius={30}>
+            <GlassSurface width={260} height={400} borderRadius={30}>
               <nav className="flex flex-col items-center justify-center gap-6 text-lg font-medium py-6">
                 {links.map((link) => (
                   <a

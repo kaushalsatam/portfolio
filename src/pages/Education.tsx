@@ -29,7 +29,7 @@ const educationData: EducationItem[] = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 container mx-auto px-4">
+    <section id="education" className="py-24 container mx-auto px-6">
       <h2 className="text-4xl font-bold text-center mb-12">
         Education
       </h2>
@@ -41,7 +41,7 @@ export default function Education() {
             className="transition-all hover:shadow-lg hover:border-primary"
           >
             <CardContent className="flex flex-col sm:flex-row sm:items-start gap-4 p-6">
-              
+
               {/* Icon */}
               <div className="flex justify-center sm:justify-start">
                 <GraduationCap className="w-8 h-8 text-primary" />
