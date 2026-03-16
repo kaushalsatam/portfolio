@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <section
       id="aboutme"
-      className="relative w-full m:h-dvh overflow-hidden px-6 py-24"
+      className="relative w-full h-dvh m:h-auto overflow-hidden px-6 py-24 flex items-center"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
