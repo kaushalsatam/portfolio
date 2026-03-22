@@ -4,11 +4,10 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import { FileDown } from "lucide-react";
-import resume from "@/assets/Kaushal-Satam-Resume.pdf";
 
 const Hero = () => {
   const openResume = () => {
-    window.open(resume, "_blank");
+    window.open("/Kaushal_Satam.pdf", "_blank");
   };
 
   return (
@@ -67,9 +66,9 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex flex-row flex-wrap justify-center items-center gap-3 pt-2">
           <a href="#contact">
-          <InteractiveHoverButton className="h-10 sm:h-12 px-4 sm:px-7 text-sm sm:text-base">
-            Get in touch
-          </InteractiveHoverButton>
+            <InteractiveHoverButton className="h-10 sm:h-12 px-4 sm:px-7 text-sm sm:text-base">
+              Get in touch
+            </InteractiveHoverButton>
           </a>
 
           <ShimmerButton

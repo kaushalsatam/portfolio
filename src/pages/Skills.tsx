@@ -102,7 +102,7 @@ const skillData: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:px-46 px-6 container mx-auto">
+    <section id="skills" className="py-24 px-6 container mx-auto">
       <h2 className="text-4xl font-bold mb-12 text-center">Skills</h2>
 
       <div className="space-y-12">
@@ -119,7 +119,7 @@ export default function Skills() {
                   className="group transition-all hover:scale-105 hover:border-primary hover:shadow-lg"
                 >
                   <CardContent className="flex flex-col items-center justify-center gap-3 py-6">
-                    <div className="text-3xl group-hover:scale-110 transition">
+                    <div className="text-5xl group-hover:scale-110 transition">
                       {skill.icon}
                     </div>
                     <span className="text-sm font-medium">{skill.name}</span>
